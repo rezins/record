@@ -1,7 +1,13 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:google_speech/config/recognition_config.dart';
+import 'package:google_speech/config/recognition_config_v1.dart';
+import 'package:google_speech/google_speech.dart';
+import 'package:google_speech/speech_client_authenticator.dart';
 import 'package:record/record.dart';
 
 import 'package:record_example/audio_player.dart';
@@ -25,6 +31,8 @@ class _AudioRecorderState extends State<AudioRecorder> {
   RecordState _recordState = RecordState.stop;
   StreamSubscription<Amplitude>? _amplitudeSub;
   Amplitude? _amplitude;
+  late SpeechToText speechToText;
+  String textTranslate = "";
 
   @override
   void initState() {
@@ -34,10 +42,21 @@ class _AudioRecorderState extends State<AudioRecorder> {
 
     _amplitudeSub = _audioRecorder
         .onAmplitudeChanged(const Duration(milliseconds: 300))
-        .listen((amp) => setState(() => _amplitude = amp));
+        .listen((amp){
+          print(amp.current);
+          setState(() => _amplitude = amp);
+    });
 
     super.initState();
   }
+
+  RecognitionConfig _getConfig() => RecognitionConfig(
+      encoding: AudioEncoding.LINEAR16,
+      model: RecognitionModel.basic,
+      enableAutomaticPunctuation: true,
+      audioChannelCount: 2,
+      sampleRateHertz: 44100,
+      languageCode: 'id-ID');
 
   Future<void> _start() async {
     try {
@@ -53,7 +72,10 @@ class _AudioRecorderState extends State<AudioRecorder> {
         // final devs = await _audioRecorder.listInputDevices();
         // final isRecording = await _audioRecorder.isRecording();
 
-        await _audioRecorder.start();
+        await _audioRecorder.start(
+            bitRate: 62000,
+          encoder: AudioEncoder.pcm16bit
+        );
         _recordDuration = 0;
 
         _startTimer();
@@ -70,6 +92,29 @@ class _AudioRecorderState extends State<AudioRecorder> {
     _recordDuration = 0;
 
     final path = await _audioRecorder.stop();
+    /*try{
+      final serviceAccount = ServiceAccount.fromString(
+          (await rootBundle.loadString('assets/gcp/massoftware-maspoint-dbb4394ec932.json')));
+      speechToText = SpeechToText.viaServiceAccount(serviceAccount);
+
+      final audio = File(path!).readAsBytesSync().toList();;
+      final config = _getConfig();
+
+      await speechToText.recognize(config, audio).then((value) {
+        setState(() {
+          textTranslate = value.results
+              .map((e) => e.alternatives.first.transcript)
+              .join('\n');
+          print(textTranslate);
+        });
+      },onError: (e){
+        print(e);
+      }).whenComplete(() => setState(() {
+        print("finish");
+      }));
+    }catch(e){
+
+    }*/
 
     if (path != null) {
       widget.onStop(path);

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "massoftware-maspoint",
+  "private_key_id": "dbb4394ec932fa15520958e2d02f112aa22d3ac9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDI8dD9hWDyioEK\nS1AG5k2TKHZFh6t80rnRveL9vNBhE/WVCuXcf9murrNQq5nd+/Ro4aSwLdnt6Z61\nGsxuY+K29oHa4squfVEQiRdMGAF/K4IOZH84nplVspglYgX89I/k3/EZY8lOKca8\nZDBT9jAvt12ahZ4U7co2A89LSv8DeB2FuVHAxFoZ6m/qEZYqFKtSn4Ou42k/3p/l\nZm6HjX3qEmVz/tx9znU5r4jMY9yP28LsXZe2CFnhWBievGltB0PXYL8NuRBophLF\n1MUc4xUwCoafdIb2h+PoRlpDdcfNEtSzzOStiglJUaK3ywdkYVQshLigwHz30j+u\nqqP2szkPAgMBAAECgf8TXI7GiWjN9d/Oc3NCjEOX6k4lukIhGizNXikrnwXKVMyq\nOmKWMbtybrgtuFsbCIEu7zmZwCaUxe3aMBAtPXKa2SWp8YWV9SfacAXOpIGAagYe\nB5DlOQ2NNFLJ8f1MYkQlyW4cWYEMBvp0gd17jufAW+qo+OGXzVGujVoWkc4Ah2aC\nOPMb/x4ohxiwqWpUOtksBv9v1siP8Y+vOLErC0CRzZfxuQnQVh+uAOFBrBvNewHt\nElblk9vkUa+JjJzkbSbCkV8vX+OAujut1uXf38gg+VQeFnVlfmtPKu2bGQDZTBJl\npP+tTsD+6PuQvYCXGWsy7zTLiz3H4jtGc71oJ6ECgYEA8p2nEEKSrU5eBrE8Iu23\nPAGKAt1OqmolT3lEhA5/uHEp97sbP4X61p4St5DF5S9vZYGEoerT5h9Tr/+921QL\nsPD/r5DVfKKlaWZDicmpxxGyQl5FFoEHtZqrLMOfvG5NzIQ5roGZjjmNLMiyd0r6\ns34w2QLQyxCUJgADvXFJolcCgYEA1AepLMB7bOrnLCaWFe0FG5QaqPlUMEq4CCyo\nYvhVhEtcW5Z4jQU8DSSrxCgMVsWNeFVE6EibT8ArYzFQBg4yeL/HedYB8nN/8UMj\ndaUoHafMmcqz1q1YlKvW+/Uwlk3QO8q8E7MjXDzEr0T/pOK5j79rWAvFzasiS+y+\n9dKdHAkCgYEAtaIheKLefLC24/u8McoV6+6bDBny0tI0rJL1IIhaRhMygCyr8Zq0\neAhPqu3Pug0RMMUOLspHaXj6hkDIOnNpbUZ/pUihC3YYsBfHaFh5qnctJVK+FmLz\nCpqInDK4W7GYvQwgwuxzsW6Uqnp2YajYl5hZqZ3aAqyevPQ12JX/snECgYEAjMHF\nMltZ1LWg3/OBwW6G7IcGp9RVanW/9FVJN+KqStgIqRicUOn/sq38hY0cm+IsB417\n4ESLLodhhkkvWcXFBdoy35QN2NmKPy0V9jy9A+robdReTQ7o9lGZt8xPBAkGSxtM\nfjt3Jv2EiOJiYCDPlTk7VskB+IY6j3LMVr8J45kCgYEAxJVlDNn+Ggonv76cePcF\ns3XTXQDBj/Gd8jpMsu1OWP5XUxYVXDwWII672SLiMZh+jy7OaSuaISj2Dpe8KEPa\nQ+5M2P9s6pjR+GN6wv1F6XSe5i3OHMOMzSI0z8ygwqDRN6VftOzsT/uliyzuxzz7\ne8Df5mSvNn8gysAt+sU1Rs8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "mascrm@massoftware-maspoint.iam.gserviceaccount.com",
+  "client_id": "116371921696097434390",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mascrm%40massoftware-maspoint.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
